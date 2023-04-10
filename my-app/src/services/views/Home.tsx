@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../App.css";
-
+import "../../RPGstyles/rpgui.css";
 // Import your images here
 import defaultImage from "../../images/paratrooper.png";
 import supplyChainImage from "../../images/analyst.png";
@@ -11,6 +11,7 @@ import futureImage from "../../images/future.png";
 import analystImage from "../../images/analyst2.png";
 
 export default function Home() {
+  <script src="../dist/rpgui.js"></script>;
   interface ClassData {
     about: string;
     image: string;
@@ -65,6 +66,9 @@ export default function Home() {
   return (
     <div className="App">
       {/* Your HTML structure with CSS classes */}
+      <div className="rpgui-container framed">
+        <p> Testing out the test</p>
+      </div>
       <div className="about-me">
         <h2>About Me</h2>
         <p>{currentData.about}</p>
