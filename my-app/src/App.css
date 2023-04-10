@@ -1,19 +1,28 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(135deg, #3f6c59, #c3cfe2);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-main {
+.App {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 90%;
+  align-items: stretch;
+  width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2%;
 }
 
 header {
@@ -31,8 +40,11 @@ header {
 
 .about-me,
 .right-box {
-  width: 100%;
-  max-width: 300px;
+  flex-basis: 25%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
   background-color: #f8f8f8;
   border-radius: 10px;
@@ -56,6 +68,7 @@ header {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  padding: 0 10px;
 }
 
 #character-image {
@@ -69,6 +82,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  margin-top: 20px;
 }
 
 .class-button {
@@ -92,26 +106,26 @@ header {
 
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 767px) {
-  main {
+  .App {
     flex-direction: column;
     align-items: stretch;
+    padding: 0;
   }
 
   .about-me,
   .right-box {
-    margin: 0;
-    max-width: none;
+    min-width: 0;
+    width: 100%;
   }
 
-  .about-me {
-    margin-bottom: 20px;
-  }
-
+  .about-me,
   .right-box {
-    margin-top: 20px;
+    min-width: 0;
+    width: 100%;
   }
 
   .class-selection {
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 }
